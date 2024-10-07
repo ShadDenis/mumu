@@ -15,6 +15,7 @@ if numbers [3] == "*":
 # for i in numbers:
 #     summa2+=summa
 #print(summa2)
+#mumu
 
 
 
