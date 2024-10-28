@@ -63,10 +63,10 @@
 # print("Кол-во кратных 9: " , int9, "ср. арефм.: ",sum(int9_numbers) / int9)
 
 
-string = input().split(" ")
-even = [i for i in range(int(string[0]), int(string[1])) if i%2==0]
-odds = [i for i in range(int(string[0]), int(string[1]))if i%2!=0]
-int9 = [i for i in range(int(string[0]), int(string[1])) if i%9==0]
-print("Кол-во четных: ", len(even), "ср. арефм.: ", sum(even) / len(even))
-print("Кол-во нечетных: ", len(odds), "ср. арефм.: ", sum(odds) / len(odds))
-print("Кол-во кратных 9: " , len(int9), "ср. арефм.: ",sum(int9) / len(int9))
+# string = input().split(" ")
+# even = [i for i in range(int(string[0]), int(string[1])) if i%2==0]
+# odds = [i for i in range(int(string[0]), int(string[1]))if i%2!=0]
+# int9 = [i for i in range(int(string[0]), int(string[1])) if i%9==0]
+# print("Кол-во четных: ", len(even), "ср. арефм.: ", sum(even) / len(even))
+# print("Кол-во нечетных: ", len(odds), "ср. арефм.: ", sum(odds) / len(odds))
+# print("Кол-во кратных 9: " , len(int9), "ср. арефм.: ",sum(int9) / len(int9))
