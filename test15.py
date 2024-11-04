@@ -41,16 +41,16 @@
 
 #13
 #№2
-spisok = [-1, -2, -4, -5, 0, 3, 3, 5, 6, 63, 3, 4]
-positive = 0
-negative = 0
-nulls = 0
-s = 10
-for x in spisok:
-    try:                        #
-      print(s / x)              #
-    except:                     #
-        print("деление на ноль")#
+# spisok = [-1, -2, -4, -5, 0, 3, 3, 5, 6, 63, 3, 4]
+# positive = 0
+# negative = 0
+# nulls = 0
+# s = 10
+# for x in spisok:
+#     try:                        #
+#       print(s / x)              #
+#     except:                     #
+#         print("деление на ноль")#
 #     if x < 0:
 #         negative+=1
 #     if x > 0:
@@ -62,3 +62,30 @@ for x in spisok:
 # print(max(spisok))
 # print(min(spisok))
 # print(positive, negative, nulls)
+
+#13
+#1
+import re
+s = input()
+
+operetion = re.findall(r"[(+*\-/\)]", s)
+print(operetion)
+numbers = re.split(r"[(+*\-/\)]", s)
+# if operetion[0] == "+":
+#     print(int(numbers[0]) + int(numbers[1]))
+# elif operetion[0] == "*":
+#     print(int(numbers[0]) * int(numbers[1]))
+# elif operetion[0] == "-":
+#     print(int(numbers[0]) - int(numbers[1]))
+# elif operetion[0] == "/":
+#     print(int(numbers[0]) / int(numbers[1]))
+
+print(numbers)
+j = 1
+result = 0
+while j <len(operetion):
+    for y in operetion:
+        if y == "+":
+            result = numbers[j-1] + numbers[j]
+    j+=1
+    print(result)
