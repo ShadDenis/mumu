@@ -45,15 +45,20 @@ spisok = [-1, -2, -4, -5, 0, 3, 3, 5, 6, 63, 3, 4]
 positive = 0
 negative = 0
 nulls = 0
+s = 10
 for x in spisok:
-    if x < 0:
-        negative+=1
-    if x > 0:
-        positive+=1
-    if x == 0:
-        nulls+=1
-
-
-print(max(spisok))
-print(min(spisok))
-print(positive, negative, nulls)
+    try:                        #
+      print(s / x)              #
+    except:                     #
+        print("деление на ноль")#
+#     if x < 0:
+#         negative+=1
+#     if x > 0:
+#         positive+=1
+#     if x == 0:
+#         nulls+=1
+#
+#
+# print(max(spisok))
+# print(min(spisok))
+# print(positive, negative, nulls)
