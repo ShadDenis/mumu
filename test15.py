@@ -66,26 +66,57 @@
 #13
 #1
 import re
-s = input()
 
+
+
+s = input()
+result = eval(s)
+print(result)
 operetion = re.findall(r"[(+*\-/\)]", s)
 print(operetion)
-numbers = re.split(r"[(+*\-/\)]", s)
-# if operetion[0] == "+":
-#     print(int(numbers[0]) + int(numbers[1]))
-# elif operetion[0] == "*":
-#     print(int(numbers[0]) * int(numbers[1]))
-# elif operetion[0] == "-":
-#     print(int(numbers[0]) - int(numbers[1]))
-# elif operetion[0] == "/":
-#     print(int(numbers[0]) / int(numbers[1]))
-
+numbers = re.split(r"[(+*\-/\)]", s.replace(" ", ""))
+# # if operetion[0] == "+":
+# #     print(int(numbers[0]) + int(numbers[1]))
+# # elif operetion[0] == "*":
+# #     print(int(numbers[0]) * int(numbers[1]))
+# # elif operetion[0] == "-":
+# #     print(int(numbers[0]) - int(numbers[1]))
+# # elif operetion[0] == "/":
+# #     print(int(numbers[0]) / int(numbers[1]))
+#
 print(numbers)
-j = 1
-result = 0
-while j <len(operetion):
-    for y in operetion:
-        if y == "+":
-            result = numbers[j-1] + numbers[j]
-    j+=1
-    print(result)
+i=0
+res = []
+j=0
+isk=[]
+while i < len(numbers):
+    # print(operetion[j])
+    # print("длина",len(numbers))
+    if operetion[j]=="/":
+        res.append(int(numbers[j]) / int(numbers[j+1]))
+        numbers.pop(j)
+        numbers.pop(j)
+        operetion.pop(j)
+        j = 0
+    j += 1
+    if operetion[j] == "*":
+        res.append(int(numbers[j]) * int(numbers[j + 1]))
+        numbers.pop(j)
+        numbers.pop(j)
+        operetion.pop(j)
+        j = 0
+    j += 1
+print(operetion, numbers)
+
+
+
+
+
+# j = 1
+# result = 0
+# while j <len(operetion):
+#     for y in operetion:
+#         if y == "+":
+#             result = numbers[j-1] + numbers[j]
+#     j+=1
+#     print(result)
